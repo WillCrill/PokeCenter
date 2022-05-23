@@ -12,12 +12,15 @@ import Detalhe from "./detalhe";
 // componentes podem consumir um estado global.
 
 const Formulario = () => {
+
+  
+
   return (
     <>
       <header className="form-header">
         <div>
           <img src={pokebola} alt="pokebola" />
-          <h2>Centro Pokémon de Ash</h2>
+          <h2>Centro Pokemon do Ash</h2>
         </div>
         <Link className="retorna" to="/">
           Inicio
@@ -49,6 +52,9 @@ const Formulario = () => {
                 <span>Pokémon</span>
               </p>
               <Input name="nomePokemon" label="Nome" />
+              <Input name="tipoPokemon" label="Tipo" />
+              <Input name="alturaPokemon" label="Altura" />
+              <Input name="idadePokemon" label="Idade" />
             </div>
           </div>
           <Detalhe />

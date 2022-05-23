@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FormularioContext } from '../../context/contextoFormulario';
+
 
 const Detalhe = () => {
   // Aqui devemos pegar os dados do formulário para podermos mostrá-lo em a visualização.
+  const context = useContext(FormularioContext);
+  const { state } = context;
+  const { nome, sobrenome, email } = state.treinador;
+  const { nomePokemon, tipoPokemon, alturaPokemon, idadePokemon } = state.pokemon;
 
   return (
     <div className="detalhe-formulario">
@@ -11,15 +17,18 @@ const Detalhe = () => {
       <section className="dados-cliente">
         <h4>Dados do Treinador</h4>
         <div className="lista">
-          <p>Nome:</p>
-          <p>Sobrenome:</p>
-          <p>Email:</p>
+          <p>Nome: {nome}</p>
+          <p>Sobrenome: {sobrenome}</p>
+          <p>Email: {email}</p>
         </div>
       </section>
       <section className="dados-cliente">
         <h4>Dados do Pokémon</h4>
         <div className="lista">
-          <p>Nome:</p>
+          <p>Nome: {nomePokemon}</p>
+          <p>Tipo: {tipoPokemon}</p>
+          <p>Altura: {alturaPokemon}</p>
+          <p>Idade: {idadePokemon}</p>
         </div>
       </section>
       <button

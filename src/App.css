@@ -34,7 +34,7 @@ a {
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
@@ -124,6 +124,7 @@ h1 {
 
 .detalhe-formulario {
   width: 70%;
+  height: 750px;
   border: 1px solid darkgray;
   margin: 0 3rem;
   border-radius: 6px;
