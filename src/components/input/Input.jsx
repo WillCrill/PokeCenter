@@ -1,5 +1,17 @@
 import React, { useContext, useState } from "react";
-import { FormularioContext } from '../../context/contextoFormulario';
+import { FormularioContext } from '../../context/FormularioContext';
+import PropTypes from 'prop-types';
+
+/**
+ *
+ * 
+ * @author William Lima
+ * @param {
+ *  name: string,
+ *  label: string
+ *  type: string
+ * } param0  
+ */
 
 const Input = ({ name, label, type = "text" }) => {
   // Aqui devemos acessar o estado global para obter os dados
@@ -41,5 +53,11 @@ const Input = ({ name, label, type = "text" }) => {
     </div>
   );
 };
+
+Input.prototype = {
+  name: PropTypes.string,
+  label: PropTypes.string,
+  type: PropTypes.string
+}
 
 export default Input;

@@ -1,5 +1,6 @@
-// Aqui devemos criar nosso contexto e nosso provider.
 import { createContext, useReducer } from "react";
+import PropTypes from 'prop-types';
+
 
 export const FormularioContext = createContext();
 
@@ -52,5 +53,9 @@ const FormularioContextProvider = ({ children }) => {
     </FormularioContext.Provider>
   );
 };
+
+FormularioContextProvider.propType ={
+  children: PropTypes.arrayOf(PropTypes.element)
+}
 
 export default FormularioContextProvider;

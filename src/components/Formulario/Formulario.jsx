@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import pokebola from "../../assets/pokebola.png";
 import treinador from "../../assets/treinador.png";
 import pikachu from "../../assets/pikachu.png";
-import Input from "../Input";
+import Input from "../input/Input";
 import Detalhe from "./detalhe";
 
 // Neste componente temos nosso formulário e dentro dele
